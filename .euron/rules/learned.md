@@ -3,7 +3,7 @@
 
 # Learned in this project
 
-- Build: `npm run build` works here (passed 1x, last 2026-11-24). Use it to verify changes.
+- Build: `npm run build` works here (passed 2x, last 2026-11-24). Use it to verify changes.
 
 ## Security (from .euron/security/assessment.md)
 - This code base has had: html inserted without escaping (xss) (SEC050). Render text, or sanitise the HTML (DOMPurify / bleach) before inserting it. Do not add more; fix the existing ones when you touch those files.
