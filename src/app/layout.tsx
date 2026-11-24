@@ -1,15 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Figtree, Fraunces, Shantell_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const figtree = Figtree({
+  variable: "--font-figtree",
   subsets: ["latin"],
+  weight: "variable",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
+  weight: "variable",
+  axes: ["SOFT", "WONK", "opsz"],
+});
+
+const shantellSans = Shantell_Sans({
+  variable: "--font-shantell",
+  subsets: ["latin"],
+  weight: "variable",
+  axes: ["SPAC", "BNCE", "INFM"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${figtree.variable} ${fraunces.variable} ${shantellSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
